@@ -17,9 +17,8 @@
   </description>
   <url type="homepage">https://minecraft.net/</url>
   <screenshots>
-    <screenshot type="default">
-      <image>https://lh3.googleusercontent.com/VONu2F1QvtTPBBgHvDZQbZBuierz1MIHGoQ9_QRsGpiu4ulrLQqeemJTboUI5Pnlcg=h900</image>
-    </screenshot>
+    <screenshot type="default">https://raw.githubusercontent.com/flathub/com.mojang.Minecraft/master/screenshots/minecraft1.png</screenshot>
+    <screenshot>https://raw.githubusercontent.com/flathub/com.mojang.Minecraft/master/screenshots/minecraft2.png</screenshot>
   </screenshots>
   <launchable type="desktop-id">com.mojang.Minecraft.desktop</launchable>
   <project_license>LicenseRef-proprietary</project_license>
