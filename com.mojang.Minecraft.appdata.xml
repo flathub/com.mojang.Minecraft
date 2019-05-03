@@ -44,6 +44,9 @@
     <screenshot type="default">https://raw.githubusercontent.com/flathub/com.mojang.Minecraft/master/screenshots/minecraft1.png</screenshot>
     <screenshot>https://raw.githubusercontent.com/flathub/com.mojang.Minecraft/master/screenshots/minecraft2.png</screenshot>
   </screenshots>
+  <metadata>
+    <value key="GnomeSoftware::popular-background">https://d3lapyynmdp1i9.cloudfront.net/thumbnails/com.mojang.Minecraft/com.mojang.minecraft-thumb.jpg</value>
+  </metadata>
   <launchable type="desktop-id">com.mojang.Minecraft.desktop</launchable>
   <project_license>LicenseRef-proprietary</project_license>
   <developer_name>Mojang AB</developer_name>
