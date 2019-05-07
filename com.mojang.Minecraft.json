@@ -4,6 +4,7 @@
   "runtime-version": "18.08",
   "sdk": "org.freedesktop.Sdk",
   "command": "minecraft",
+  "separate-locales": false,
   "base": "io.atom.electron.BaseApp",
   "base-version": "stable",
   "sdk-extensions": [
