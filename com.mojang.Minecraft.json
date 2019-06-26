@@ -63,8 +63,8 @@
           "type": "extra-data",
           "filename": "Minecraft.tar.gz",
           "url": "https://launcher.mojang.com/download/Minecraft.tar.gz",
-          "sha256": "61024d7573e82d8b4c730f01b7a74e4c925bfb62e2473570fe4b16a04df56816",
-          "size": 66992368
+          "sha256": "7edfd08f1ecf15ec36a555b609a6c5f2e8504350b5c7ccb2392fd051d133e06d",
+          "size": 66565594
         },
         {
           "type": "script",
