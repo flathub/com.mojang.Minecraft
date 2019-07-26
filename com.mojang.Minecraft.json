@@ -77,7 +77,7 @@
         {
           "type": "script",
           "commands": [
-            "/app/extra/minecraft-launcher/minecraft-launcher"
+            "/app/extra/minecraft-launcher/minecraft-launcher --workDir=$XDG_DATA_HOME/../.minecraft/"
           ],
           "dest-filename": "minecraft"
         },
