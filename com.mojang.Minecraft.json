@@ -77,7 +77,7 @@
         {
           "type": "script",
           "commands": [
-            "/app/extra/minecraft-launcher/minecraft-launcher"
+            "exec /app/extra/minecraft-launcher/minecraft-launcher $@"
           ],
           "dest-filename": "minecraft"
         },
