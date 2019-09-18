@@ -12,7 +12,6 @@
     "org.freedesktop.Sdk.Extension.openjdk11"
   ],
   "finish-args": [
-    "--persist=.minecraft",
     /* X11 access */
     "--socket=x11",
     "--share=ipc",
@@ -75,11 +74,8 @@
           ]
         },
         {
-          "type": "script",
-          "commands": [
-            "exec /app/extra/minecraft-launcher/minecraft-launcher $@ --workDir=$XDG_DATA_HOME/../.minecraft/"
-          ],
-          "dest-filename": "minecraft"
+          "type": "file",
+          "path": "minecraft"
         },
         {
           "type": "file",
