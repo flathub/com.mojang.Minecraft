@@ -3,10 +3,9 @@
 # Move minecraft profile if detected at old location
 if [ -d $XDG_DATA_HOME/../.minecraft ]; then
     if [ ! -f $XDG_DATA_HOME/.migrated ]; then
-    	echo "Migrating to XDG dirs"
-	cp -frl $XDG_DATA_HOME/../.minecraft/* $XDG_DATA_HOME/
-
-	touch $XDG_DATA_HOME/.migrated
+        echo "Migrating to XDG dirs"
+        cp -frl $XDG_DATA_HOME/../.minecraft/* $XDG_DATA_HOME/
+        touch $XDG_DATA_HOME/.migrated
     fi
 fi
 
