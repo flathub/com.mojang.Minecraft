@@ -12,7 +12,7 @@
     "org.freedesktop.Sdk.Extension.openjdk11"
   ],
   "finish-args": [
-    "--persist=.minecraft",
+    "--filesystem=~/.minecraft:create",
     /* X11 access */
     "--socket=x11",
     "--share=ipc",
