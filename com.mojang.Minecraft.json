@@ -6,7 +6,7 @@
   "command": "minecraft",
   "separate-locales": false,
   "base": "io.atom.electron.BaseApp",
-  "base-version": "stable",
+  "base-version": "19.08",
   "tags": ["proprietary"],
   "sdk-extensions": [
     "org.freedesktop.Sdk.Extension.openjdk11"
