@@ -62,9 +62,9 @@
         {
           "type": "extra-data",
           "filename": "Minecraft.tar.gz",
-          "url": "https://launcher.mojang.com/download/linux/x86_64/minecraft-launcher_2.1.11314.tar.gz",
-          "sha256": "0f727ad39170f6063ddac45745c6c7e50925fbc0fa4c8aedbbb4aa1f12fca3f1",
-          "size": 73662236
+          "url": "https://launcher.mojang.com/download/linux/x86_64/minecraft-launcher_2.1.12464.tar.gz",
+          "sha256": "63bc6f0b8f8a387f7f49da8f75466502ef226777221e877e9c842b1a76702fcd",
+          "size": 73651241
         },
         {
           "type": "script",
