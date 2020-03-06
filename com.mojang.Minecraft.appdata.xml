@@ -51,6 +51,10 @@
   <project_license>LicenseRef-proprietary</project_license>
   <developer_name>Mojang AB</developer_name>
   <releases>
+    <release date="2020-01-21" version="1.15.2"/>
+    <release date="2019-12-17" version="1.15.1"/>
+    <release date="2019-12-10" version="1.15"/>
+    <release date="2019-07-19" version="1.14.4"/>
     <release date="2019-06-24" version="1.14.3"/>
     <release date="2019-05-27" version="1.14.2"/>
     <release date="2019-05-13" version="1.14.1"/>
