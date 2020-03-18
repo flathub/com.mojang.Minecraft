@@ -1,113 +1,110 @@
 {
-  "app-id": "com.mojang.Minecraft",
-  "runtime": "org.freedesktop.Platform",
-  "runtime-version": "19.08",
-  "sdk": "org.freedesktop.Sdk",
-  "command": "minecraft",
-  "separate-locales": false,
-  "base": "io.atom.electron.BaseApp",
-  "base-version": "19.08",
-  "tags": ["proprietary"],
-  "sdk-extensions": [
-    "org.freedesktop.Sdk.Extension.openjdk11"
-  ],
-  "finish-args": [
-    "--persist=.minecraft",
-    /* X11 access */
-    "--socket=x11",
-    "--share=ipc",
-    /* OpenGL access */
-    "--device=dri",
-    /* PulseAudio access */
-    "--socket=pulseaudio",
-    /* Network access */
-    "--share=network",
-    "--env=JAVA_HOME=/app/jre"
-  ],
-  "build-options" : {
-    "append-path": "/usr/lib/sdk/openjdk11/bin"
-  },
-  "modules": [
-    {
-      /* Needed by Minecraft 1.8.2 and up. */
-      "name": "xrandr",
-      "sources": [
-        {
-          "type": "archive",
-          "url": "https://www.x.org/archive/individual/app/xrandr-1.5.1.tar.gz",
-          "sha256": "7b99edb7970a1365eaf5bcaf552144e4dfc3ccf510c4abc08569849929fb366e"
-        }
-      ]
+    "app-id": "com.mojang.Minecraft",
+    "runtime": "org.freedesktop.Platform",
+    "runtime-version": "19.08",
+    "sdk": "org.freedesktop.Sdk",
+    "command": "minecraft",
+    "separate-locales": false,
+    "base": "io.atom.electron.BaseApp",
+    "base-version": "19.08",
+    "tags": [
+        "proprietary"
+    ],
+    "sdk-extensions": [
+        "org.freedesktop.Sdk.Extension.openjdk11"
+    ],
+    "finish-args": [
+        "--persist=.minecraft",
+        "--socket=x11",
+        "--share=ipc",
+        "--device=dri",
+        "--socket=pulseaudio",
+        "--share=network",
+        "--env=JAVA_HOME=/app/jre"
+    ],
+    "build-options": {
+        "append-path": "/usr/lib/sdk/openjdk11/bin"
     },
-    {
-      "name": "openjdk",
-        "buildsystem": "simple",
-        "build-commands": [
-          "/usr/lib/sdk/openjdk11/install.sh"
-        ]
-    },
-    {
-      "name": "minecraft",
-      "buildsystem": "simple",
-      "build-commands": [
-        "install -Dm755 apply_extra /app/bin/apply_extra",
-        "install -Dp -m 755 minecraft /app/bin/minecraft",
-        "install -Dp -m 644 com.mojang.Minecraft.desktop /app/share/applications/com.mojang.Minecraft.desktop",
-        "install -Dp -m 644 com.mojang.Minecraft-64.png /app/share/icons/hicolor/64x64/apps/com.mojang.Minecraft.png",
-        "install -Dp -m 644 com.mojang.Minecraft-128.png /app/share/icons/hicolor/128x128/apps/com.mojang.Minecraft.png",
-        "install -Dp -m 644 com.mojang.Minecraft.png /app/share/icons/hicolor/256x256/apps/com.mojang.Minecraft.png",
-        "install -Dp -m 644 com.mojang.Minecraft.appdata.xml /app/share/appdata/com.mojang.Minecraft.appdata.xml"
-      ],
-      "sources" : [
+    "modules": [
         {
-          "type": "extra-data",
-          "filename": "Minecraft.tar.gz",
-          "url": "https://launcher.mojang.com/download/linux/x86_64/minecraft-launcher_2.1.12464.tar.gz",
-          "sha256": "63bc6f0b8f8a387f7f49da8f75466502ef226777221e877e9c842b1a76702fcd",
-          "size": 73651241,
-          "x-checker-data": {
-            "type": "html",
-            "url": "https://launchermeta.mojang.com/v1/products/launcher/6f083b80d5e6fabbc4236f81d0d8f8a350c665a9/linux.json",
-            "version-pattern": "\"launcher-core\": \\[.*?\"name\": \"(.*?)\".*?\\]",
-            "url-template": "https://launcher.mojang.com/download/linux/x86_64/minecraft-launcher_$version.tar.gz"
-}
+            "name": "xrandr",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://www.x.org/archive/individual/app/xrandr-1.5.1.tar.gz",
+                    "sha256": "7b99edb7970a1365eaf5bcaf552144e4dfc3ccf510c4abc08569849929fb366e"
+                }
+            ]
         },
         {
-          "type": "script",
-          "dest-filename": "apply_extra",
-          "commands": [
-              "tar -xf Minecraft.tar.gz",
-              "rm -f Minecraft.tar.gz"
-          ]
+            "name": "openjdk",
+            "buildsystem": "simple",
+            "build-commands": [
+                "/usr/lib/sdk/openjdk11/install.sh"
+            ]
         },
         {
-          "type": "script",
-          "commands": [
-            "exec /app/extra/minecraft-launcher/minecraft-launcher $@"
-          ],
-          "dest-filename": "minecraft"
-        },
-        {
-          "type": "file",
-          "path": "com.mojang.Minecraft.desktop"
-        },
-        {
-          "type": "file",
-          "path": "com.mojang.Minecraft-64.png"
-        },
-        {
-          "type": "file",
-          "path": "com.mojang.Minecraft-128.png"
-        },
-        {
-          "type": "file",
-          "path": "com.mojang.Minecraft.png"
-        },
-        {
-          "type": "file",
-          "path": "com.mojang.Minecraft.appdata.xml"
+            "name": "minecraft",
+            "buildsystem": "simple",
+            "build-commands": [
+                "install -Dm755 apply_extra /app/bin/apply_extra",
+                "install -Dp -m 755 minecraft /app/bin/minecraft",
+                "install -Dp -m 644 com.mojang.Minecraft.desktop /app/share/applications/com.mojang.Minecraft.desktop",
+                "install -Dp -m 644 com.mojang.Minecraft-64.png /app/share/icons/hicolor/64x64/apps/com.mojang.Minecraft.png",
+                "install -Dp -m 644 com.mojang.Minecraft-128.png /app/share/icons/hicolor/128x128/apps/com.mojang.Minecraft.png",
+                "install -Dp -m 644 com.mojang.Minecraft.png /app/share/icons/hicolor/256x256/apps/com.mojang.Minecraft.png",
+                "install -Dp -m 644 com.mojang.Minecraft.appdata.xml /app/share/appdata/com.mojang.Minecraft.appdata.xml"
+            ],
+            "sources": [
+                {
+                    "type": "extra-data",
+                    "filename": "Minecraft.tar.gz",
+                    "url": "https://launcher.mojang.com/download/linux/x86_64/minecraft-launcher_2.1.12872.tar.gz",
+                    "sha256": "75ebd2673ccc894e3b80dcc5d8c41f5af3f046377607399a39641778f2beac7d",
+                    "size": 72880072,
+                    "x-checker-data": {
+                        "type": "html",
+                        "url": "https://launchermeta.mojang.com/v1/products/launcher/6f083b80d5e6fabbc4236f81d0d8f8a350c665a9/linux.json",
+                        "version-pattern": "\"launcher-core\": \\[.*?\"name\": \"(.*?)\".*?\\]",
+                        "url-template": "https://launcher.mojang.com/download/linux/x86_64/minecraft-launcher_$version.tar.gz"
+                    }
+                },
+                {
+                    "type": "script",
+                    "dest-filename": "apply_extra",
+                    "commands": [
+                        "tar -xf Minecraft.tar.gz",
+                        "rm -f Minecraft.tar.gz"
+                    ]
+                },
+                {
+                    "type": "script",
+                    "commands": [
+                        "exec /app/extra/minecraft-launcher/minecraft-launcher $@"
+                    ],
+                    "dest-filename": "minecraft"
+                },
+                {
+                    "type": "file",
+                    "path": "com.mojang.Minecraft.desktop"
+                },
+                {
+                    "type": "file",
+                    "path": "com.mojang.Minecraft-64.png"
+                },
+                {
+                    "type": "file",
+                    "path": "com.mojang.Minecraft-128.png"
+                },
+                {
+                    "type": "file",
+                    "path": "com.mojang.Minecraft.png"
+                },
+                {
+                    "type": "file",
+                    "path": "com.mojang.Minecraft.appdata.xml"
+                }
+            ]
         }
-      ]
-    }
-  ]
+    ]
 }
