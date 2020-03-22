@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# Move minecraft profile if detected at old location
+if [ -d $XDG_DATA_HOME/../.minecraft ]; then
+    if [ ! -f $XDG_DATA_HOME/minecraft/.migrated ]; then
+        echo "Migrating to XDG dirs"
+        mkdir -p $XDG_DATA_HOME/minecraft
+        cp -frl $XDG_DATA_HOME/../.minecraft/* $XDG_DATA_HOME/minecraft/
+        touch $XDG_DATA_HOME/minecraft/.migrated
+    fi
+fi
+
+exec /app/extra/minecraft-launcher/minecraft-launcher $@ --workDir=$XDG_DATA_HOME/minecraft
