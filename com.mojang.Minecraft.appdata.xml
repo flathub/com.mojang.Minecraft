@@ -51,12 +51,9 @@
   <project_license>LicenseRef-proprietary</project_license>
   <developer_name>Mojang AB</developer_name>
   <releases>
-    <release date="2019-06-24" version="1.14.3"/>
-    <release date="2019-05-27" version="1.14.2"/>
-    <release date="2019-05-13" version="1.14.1"/>
-    <release date="2019-04-23" version="1.14"/>
-    <release date="2018-10-22" version="1.13.2"/>
-</releases>
+    <release version="2.1.13086" date="2020-03-20"/>
+    <release version="2.1.12872" date="2020-03-16"/>
+  </releases>
   <content_rating type="oars-1.0">
     <content_attribute id="violence-cartoon">moderate</content_attribute>
     <content_attribute id="violence-fantasy">none</content_attribute>
