@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Application
-Name=Minecraft
+Name=Minecraft: Java Edition
 Icon=com.mojang.Minecraft
 Exec=minecraft
 Categories=Game;
