@@ -13,6 +13,16 @@
     "sdk-extensions": [
         "org.freedesktop.Sdk.Extension.openjdk11"
     ],
+    "add-extensions": {
+        "org.freedesktop.Sdk.Extension.openjdk8": {
+            "directory": "jdk8",
+            "version": "19.08",
+            "no-autodownload": true
+        }
+    },
+    "cleanup-commands": [
+        "mkdir -p /app/jdk8"
+    ],
     "finish-args": [
         "--persist=.minecraft",
         "--socket=x11",
