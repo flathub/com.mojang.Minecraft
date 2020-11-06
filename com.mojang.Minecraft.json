@@ -1,12 +1,12 @@
 {
     "app-id": "com.mojang.Minecraft",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "19.08",
+    "runtime-version": "20.08",
     "sdk": "org.freedesktop.Sdk",
     "command": "minecraft",
     "separate-locales": false,
     "base": "io.atom.electron.BaseApp",
-    "base-version": "19.08",
+    "base-version": "20.08",
     "tags": [
         "proprietary"
     ],
@@ -16,7 +16,7 @@
     "add-extensions": {
         "org.freedesktop.Sdk.Extension.openjdk8": {
             "directory": "jdk8",
-            "version": "19.08",
+            "version": "20.08",
             "no-autodownload": true
         }
     },
