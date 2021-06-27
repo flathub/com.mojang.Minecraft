@@ -1,3 +1,0 @@
-#!/bin/sh
-
-exec /app/extra/minecraft-launcher/minecraft-launcher $@ -w=$XDG_DATA_HOME/minecraft
