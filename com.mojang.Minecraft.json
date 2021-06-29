@@ -27,6 +27,7 @@
         "--persist=.minecraft",
         "--socket=x11",
         "--share=ipc",
+        "--socket=wayland",
         "--device=dri",
         "--socket=pulseaudio",
         "--share=network",
@@ -110,6 +111,47 @@
                 {
                     "type": "file",
                     "path": "com.mojang.Minecraft.appdata.xml"
+                }
+            ]
+        },
+
+        {
+            "name": "extra-cmake-modules",
+            "buildsystem": "cmake-ninja",
+            "builddir": true,
+            "config-opts": [
+              "-DBUILD_TESTING=OFF"
+            ],
+            "sources": [
+              {
+                "type": "archive",
+                "url": "https://download.kde.org/stable/frameworks/5.74/extra-cmake-modules-5.74.0.tar.xz",
+                "sha256": "71406067bcd99ac106e0e3bfbb073653b18fd6d01039c0298d9767680977364f"
+              }
+            ]
+          },
+        {
+            "name": "glfw",
+            "buildsystem": "cmake",
+            "config-opts": [
+                "-DCMAKE_INSTALL_LIBDIR=lib",
+                "-DBUILD_SHARED_LIBS=ON",
+                "-DGLFW_USE_WAYLAND=ON"
+             ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://github.com/glfw/glfw/archive/3.3.4.tar.gz",
+                    "sha256": "cc8ac1d024a0de5fd6f68c4133af77e1918261396319c24fd697775a6bc93b63"
+                },
+                {
+                    "type": "patch",
+                    "paths": [
+                        "patches/0001-set-O_NONBLOCK-on-repeat-timerfd.patch",
+                        "patches/0002-Don-t-crash-on-calls-to-focus-or-icon.patch",
+                        "patches/0003-fix-broken-opengl-screenshots-on-mutter.patch",
+                        "patches/0004-Do-not-crash-on-window-position-set.patch"
+                    ]               
                 }
             ]
         }
