@@ -18,7 +18,9 @@
         "--device=dri",
         "--socket=pulseaudio",
         "--share=network",
-        "--env=JAVA_HOME=/app/jre"
+        "--env=JAVA_HOME=/app/jre",
+        "--filesystem=~/.local/share/flatpak/app/com.mojang.Minecraft:ro",
+        "--filesystem=/var/lib/flatpak/app/com.mojang.Minecraft:ro"
     ],
     "modules": [
         {
