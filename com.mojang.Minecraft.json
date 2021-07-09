@@ -49,9 +49,9 @@
                     "sha256": "2d7b7ea3835536b6900d0201957c6d96d646354fd071badab2ff750344eba5c6",
                     "size": 547096,
                     "x-checker-data": {
-                        "type": "json",
+                        "type": "html",
                         "url": "https://launchermeta.mojang.com/v1/products/launcher/6f083b80d5e6fabbc4236f81d0d8f8a350c665a9/linux.json",
-                        "version-pattern": ".\"launcher-bootstrap\"[] | {version} | .[] | .name",
+                        "version-pattern": "\"launcher-bootstrap\": \\[\\{.*?name\": \"(.*?)\"",
                         "url-template": "https://launcher.mojang.com/download/linux/x86_64/minecraft-launcher_$version.tar.gz"
                     }
                 },
