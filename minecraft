@@ -1,13 +1,26 @@
 #!/bin/sh
 
-# Move minecraft profile if detected at old location
-if [ -d $XDG_DATA_HOME/../.minecraft ]; then
-    if [ ! -f $XDG_DATA_HOME/minecraft/.migrated ]; then
-        echo "Migrating to XDG dirs"
-        mkdir -p $XDG_DATA_HOME/minecraft
-        cp -frl $XDG_DATA_HOME/../.minecraft/* $XDG_DATA_HOME/minecraft/
-        touch $XDG_DATA_HOME/minecraft/.migrated
+# A quick script to migrate back to the non-xdg directory.
+# This is done due to the launcher not fully respecting the --workDir argument so we have to hack our way around it.
+if [ ! -f $XDG_DATA_HOME/../.minecraft/.nonxdg-migrated ]; then
+    if [ -d $XDG_DATA_HOME/minecraft ]; then
+        echo "Migrating back to $XDG_DATA_HOME/../.minecraft"
+        
+        # Checks if there already are files in .minecraft.
+        # We move them to a safe folder in case someone for some reason stores something there.
+        # Version 2.2.1867 of the launcher actually also doesn't respect the --workDir argument properly so this might just back up a log file.
+        if [ "$(ls -A $XDG_DATA_HOME/../.minecraft)" ]; then
+            echo "$XDG_DATA_HOME/../.minecraft not empty. Moving away files so that we don't overwrite anything..."
+            mkdir -p $XDG_DATA_HOME/../.minecraft-backup
+            mv $XDG_DATA_HOME/../.minecraft/* $XDG_DATA_HOME/../.minecraft-backup/
+        fi
+
+        mv $XDG_DATA_HOME/minecraft/* $XDG_DATA_HOME/../.minecraft/
+        rm -r $XDG_DATA_HOME/minecraft
     fi
+    # We create a symlink incase that we want to migrate back to using $XDG_DATA_HOME/minecraft.
+    ln -s $XDG_DATA_HOME/../.minecraft $XDG_DATA_HOME/minecraft
+    touch $XDG_DATA_HOME/../.minecraft/.nonxdg-migrated
 fi
 
-exec /app/extra/minecraft-launcher/minecraft-launcher $@ --workDir=$XDG_DATA_HOME/minecraft
+exec /app/extra/minecraft-launcher/minecraft-launcher $@ --workDir $XDG_DATA_HOME/../.minecraft

@@ -10,31 +10,14 @@
     "tags": [
         "proprietary"
     ],
-    "sdk-extensions": [
-        "org.freedesktop.Sdk.Extension.openjdk11"
-    ],
-    "add-extensions": {
-        "org.freedesktop.Sdk.Extension.openjdk8": {
-            "directory": "jdk8",
-            "version": "20.08",
-            "no-autodownload": true
-        }
-    },
-    "cleanup-commands": [
-        "mkdir -p /app/jdk8"
-    ],
     "finish-args": [
         "--persist=.minecraft",
         "--socket=x11",
         "--share=ipc",
         "--device=dri",
         "--socket=pulseaudio",
-        "--share=network",
-        "--env=JAVA_HOME=/app/jre"
-    ],
-    "build-options": {
-        "append-path": "/usr/lib/sdk/openjdk11/bin"
-    },
+        "--share=network"
+        ],
     "modules": [
         {
             "name": "xrandr",
@@ -44,13 +27,6 @@
                     "url": "https://www.x.org/archive/individual/app/xrandr-1.5.1.tar.gz",
                     "sha256": "7b99edb7970a1365eaf5bcaf552144e4dfc3ccf510c4abc08569849929fb366e"
                 }
-            ]
-        },
-        {
-            "name": "openjdk",
-            "buildsystem": "simple",
-            "build-commands": [
-                "/usr/lib/sdk/openjdk11/install.sh"
             ]
         },
         {
@@ -69,13 +45,13 @@
                 {
                     "type": "extra-data",
                     "filename": "Minecraft.tar.gz",
-                    "url": "https://launcher.mojang.com/download/linux/x86_64/minecraft-launcher_2.2.1867.tar.gz",
-                    "sha256": "5e19e3459015fb28bc54df588b6613320281d953bc2f394a28a95465637eeabe",
-                    "size": 76767905,
+                    "url": "https://launcher.mojang.com/download/linux/x86_64/minecraft-launcher_928.tar.gz",
+                    "sha256": "2d7b7ea3835536b6900d0201957c6d96d646354fd071badab2ff750344eba5c6",
+                    "size": 547096,
                     "x-checker-data": {
                         "type": "html",
                         "url": "https://launchermeta.mojang.com/v1/products/launcher/6f083b80d5e6fabbc4236f81d0d8f8a350c665a9/linux.json",
-                        "version-pattern": "\"launcher-core\": \\[.*?\"name\": \"(.*?)\".*?\\]",
+                        "version-pattern": "\"launcher-bootstrap\": \\[\\{.*?name\": \"(.*?)\"",
                         "url-template": "https://launcher.mojang.com/download/linux/x86_64/minecraft-launcher_$version.tar.gz"
                     }
                 },
