@@ -64,11 +64,8 @@
                     ]
                 },
                 {
-                    "type": "script",
-                    "commands": [
-                        "exec /app/extra/minecraft-launcher/minecraft-launcher $@ -w=$XDG_DATA_HOME/minecraft"
-                    ],
-                    "dest-filename": "minecraft"
+                    "type": "file",
+                    "path": "minecraft"
                 },
                 {
                     "type": "file",
