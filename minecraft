@@ -1,14 +1,14 @@
 #!/bin/sh
 
-# A quick script to migrate back to the non-xdg directory
-# This is done due to the launcher not fully respecting the workdir argument so we have to hack our way around it.
-if [ -d $XDG_DATA_HOME/minecraft ]; then
-    if [ ! -f $XDG_DATA_HOME/../.minecraft/.nonxdg-migrated ]; then
+# A quick script to migrate back to the non-xdg directory.
+# This is done due to the launcher not fully respecting the --workDir argument so we have to hack our way around it.
+if [ ! -f $XDG_DATA_HOME/../.minecraft/.nonxdg-migrated ]; then
+    if [ -d $XDG_DATA_HOME/minecraft ]; then
         echo "Migrating back to $XDG_DATA_HOME/../.minecraft"
         
-        # Checks if there already is files in .minecraft.
+        # Checks if there already are files in .minecraft.
         # We move them to a safe folder in case someone for some reason stores something there.
-        # Version 2.2.1867 of the launcher actually also doesn't respect the workdir argument properly so this might just back up a log file.
+        # Version 2.2.1867 of the launcher actually also doesn't respect the --workDir argument properly so this might just back up a log file.
         if [ "$(ls -A $XDG_DATA_HOME/../.minecraft)" ]; then
             echo "$XDG_DATA_HOME/../.minecraft not empty. Moving away files so that we don't overwrite anything..."
             mkdir -p $XDG_DATA_HOME/../.minecraft-backup
@@ -18,10 +18,10 @@ if [ -d $XDG_DATA_HOME/minecraft ]; then
         mv $XDG_DATA_HOME/minecraft/* $XDG_DATA_HOME/../.minecraft/
         rm -r $XDG_DATA_HOME/minecraft
 
-        # We create a symlink incase that we want to migrate back to using $XDG_DATA_HOME/minecraft
-        ln -s $XDG_DATA_HOME/../.minecraft $XDG_DATA_HOME/minecraft
         touch $XDG_DATA_HOME/../.minecraft/.nonxdg-migrated
     fi
+    # We create a symlink incase that we want to migrate back to using $XDG_DATA_HOME/minecraft.
+    ln -s $XDG_DATA_HOME/../.minecraft $XDG_DATA_HOME/minecraft
 fi
 
-exec /app/extra/minecraft-launcher/minecraft-launcher $@ -w $XDG_DATA_HOME/../.minecraft
+exec /app/extra/minecraft-launcher/minecraft-launcher $@ --workDir $XDG_DATA_HOME/../.minecraft
