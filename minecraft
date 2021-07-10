@@ -17,11 +17,10 @@ if [ ! -f $XDG_DATA_HOME/../.minecraft/.nonxdg-migrated ]; then
 
         mv $XDG_DATA_HOME/minecraft/* $XDG_DATA_HOME/../.minecraft/
         rm -r $XDG_DATA_HOME/minecraft
-
-        touch $XDG_DATA_HOME/../.minecraft/.nonxdg-migrated
     fi
     # We create a symlink incase that we want to migrate back to using $XDG_DATA_HOME/minecraft.
     ln -s $XDG_DATA_HOME/../.minecraft $XDG_DATA_HOME/minecraft
+    touch $XDG_DATA_HOME/../.minecraft/.nonxdg-migrated
 fi
 
 exec /app/extra/minecraft-launcher/minecraft-launcher $@ --workDir $XDG_DATA_HOME/../.minecraft
