@@ -30,6 +30,29 @@
             ]
         },
         {
+            "name": "libsecret",
+            "buildsystem": "meson",
+            "config-opts": [
+                "-Dmanpage=false",
+                "-Dvapi=false",
+                "-Dgtk_doc=false"
+            ],
+            "cleanup": [
+                "/bin",
+                "/include",
+                "/lib/pkgconfig",
+                "/share/gir-1.0",
+                "/share/man"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/libsecret/0.20/libsecret-0.20.4.tar.xz",
+                    "sha256": "325a4c54db320c406711bf2b55e5cb5b6c29823426aa82596a907595abb39d28"
+                }
+            ]
+        },
+        {
             "name": "minecraft",
             "buildsystem": "simple",
             "build-commands": [
