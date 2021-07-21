@@ -14,7 +14,9 @@
         "--share=ipc",
         "--device=dri",
         "--socket=pulseaudio",
-        "--share=network"
+        "--share=network",
+        "--filesystem=~/.local/share/flatpak/app/com.mojang.Minecraft:ro",
+        "--filesystem=/var/lib/flatpak/app/com.mojang.Minecraft:ro"
         ],
     "modules": [
         {
