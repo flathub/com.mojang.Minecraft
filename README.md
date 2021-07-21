@@ -2,4 +2,4 @@
 
 #### Resource Packs, Mods etc.
 
-You can install these to `~/.var/app/com.mojang.Minecraft/data/minecraft`.
+You can install these to `~/.var/app/com.mojang.Minecraft/.minecraft`.
