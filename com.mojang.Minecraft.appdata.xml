@@ -51,6 +51,7 @@
   <project_license>LicenseRef-proprietary</project_license>
   <developer_name>Mojang AB</developer_name>
   <releases>
+    <release version="928" date="2021-06-27"/>
     <release version="2.2.1867" date="2021-02-22"/>
     <release version="2.2.1441" date="2021-02-01"/>
     <release version="2.2.1262" date="2021-01-19"/>
