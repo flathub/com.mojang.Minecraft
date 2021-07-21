@@ -5,8 +5,6 @@
     "sdk": "org.freedesktop.Sdk",
     "command": "minecraft",
     "separate-locales": false,
-    "base": "io.atom.electron.BaseApp",
-    "base-version": "20.08",
     "tags": [
         "proprietary"
     ],
