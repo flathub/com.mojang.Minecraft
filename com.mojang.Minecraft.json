@@ -14,8 +14,9 @@
         "--share=ipc",
         "--device=dri",
         "--socket=pulseaudio",
-        "--share=network"
-        ],
+        "--share=network",
+        "--env=XCURSOR_PATH=/run/host/share/icons:/run/host/user-share/icons"
+    ],
     "modules": [
         {
             "name": "xrandr",
