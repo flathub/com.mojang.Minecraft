@@ -1,0 +1,12 @@
+#!/bin/sh 
+
+# verify extension installed and config file exists.
+if test -f "/app/utils/gamescope/bin/gamescope" && test -f "$XDG_DATA_HOME/../.minecraft/gamescope.txt"; then    
+
+    echo "Gamescope extension installed and ~/.var/app/com.mojang.Minecraft/.minecraft/gamescope.txt exists, attempting to run with Gamescope"
+    echo "If wanted, put Gamescope arguments in ~/.var/app/com.mojang.Minecraft/.minecraft/gamescope.txt"
+    /app/utils/gamescope/bin/gamescope $(cat "$XDG_DATA_HOME"/../.minecraft/gamescope.txt) minecraft
+
+else
+    minecraft
+fi
