@@ -17,6 +17,17 @@
         "--share=network",
         "--env=XCURSOR_PATH=/run/host/share/icons:/run/host/user-share/icons"
     ],
+    "cleanup": [
+        "/include",
+        "/lib/pkgconfig",
+        "/man",
+        "/share/doc",
+        "/share/gtk-doc",
+        "/share/man",
+        "/share/pkgconfig",
+        "*.la",
+        "*.a"
+    ],
     "modules": [
         "shared-modules/libsecret/libsecret.json",
         {
@@ -44,6 +55,66 @@
                     "type": "archive",
                     "url": "https://www.x.org/archive/individual/app/xrandr-1.5.1.tar.gz",
                     "sha256": "7b99edb7970a1365eaf5bcaf552144e4dfc3ccf510c4abc08569849929fb366e"
+                }
+            ]
+        },
+        {
+            "name": "gcr",
+            "buildsystem": "meson",
+            "cleanup": [
+                "/include",
+                "/lib/debug",
+                "/lib/girepository-1.0",
+                "/lib/pkgconfig",
+                "/man",
+                "/share/gir-1.0",
+                "/share/gtk-doc",
+                "/share/doc",
+                "/share/man",
+                "/share/pkgconfig",
+                "*.a",
+                "*.la"
+            ],
+            "config-opts": [
+                "-Dgtk_doc=false",
+                "-Dintrospection=false"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "sha256": "0909fc49ea8ad4832d27564ff2fd1dc666696e2a07c73941c48829e60572da01",
+                    "url": "https://download.gnome.org/sources/gcr/3.41/gcr-3.41.0.tar.xz"
+                }
+            ]
+        },
+        {
+            "name": "gnome-keyring",
+            "rm-configure": true,
+            "config-opts": [
+                "--with-pkcs11-config=/app/share/gk-to-remove",
+                "--with-pkcs11-modules=/app/share/gk-to-remove",
+                "--disable-doc",
+                "--disable-pam",
+                "--disable-p11-tests",
+                "--disable-ssh-agent"
+            ],
+            "cleanup": [
+                "/etc/xdg",
+                "/share/gk-to-remove",
+                "/share/GConf"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/gnome-keyring/40/gnome-keyring-40.0.tar.xz",
+                    "sha256": "a3d24db08ee2fdf240fbbf0971a98c8ee295aa0e1a774537f4ea938038a3b931"
+                },
+                {
+                    "type": "script",
+                    "dest-filename": "autogen.sh",
+                    "commands": [
+                        "AUTOMAKE=\"automake --foreign\" autoreconf -vfi"
+                    ]
                 }
             ]
         },
