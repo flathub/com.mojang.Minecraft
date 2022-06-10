@@ -3,7 +3,7 @@
     "runtime": "org.freedesktop.Platform",
     "runtime-version": "21.08",
     "sdk": "org.freedesktop.Sdk",
-    "command": "minecraft",
+    "command": "minecraft-wrapper",
     "separate-locales": false,
     "tags": [
         "proprietary"
@@ -17,6 +17,18 @@
         "--share=network",
         "--env=XCURSOR_PATH=/run/host/share/icons:/run/host/user-share/icons"
     ],
+    "add-extensions": {
+        "com.valvesoftware.Steam.Utility": {
+            "subdirectories": true,
+            "directory": "utils",
+            "version": "stable",
+            "versions": "stable;beta;test;master",
+            "add-ld-path": "lib",
+            "merge-dirs": "bin;lib/python3.8/site-packages;share/vulkan/explicit_layer.d;share/vulkan/implicit_layer.d;",
+            "no-autodownload": true,
+            "autodelete": true
+        }
+    },
     "modules": [
         "shared-modules/libsecret/libsecret.json",
         {
@@ -57,7 +69,9 @@
                 "install -Dp -m 644 com.mojang.Minecraft-64.png /app/share/icons/hicolor/64x64/apps/com.mojang.Minecraft.png",
                 "install -Dp -m 644 com.mojang.Minecraft-128.png /app/share/icons/hicolor/128x128/apps/com.mojang.Minecraft.png",
                 "install -Dp -m 644 com.mojang.Minecraft.png /app/share/icons/hicolor/256x256/apps/com.mojang.Minecraft.png",
-                "install -Dp -m 644 com.mojang.Minecraft.appdata.xml /app/share/appdata/com.mojang.Minecraft.appdata.xml"
+                "install -Dp -m 644 com.mojang.Minecraft.appdata.xml /app/share/appdata/com.mojang.Minecraft.appdata.xml",
+                "mkdir -p /app/utils",
+                "install -Dp -m 755 minecraft-wrapper /app/bin/minecraft-wrapper"
             ],
             "sources": [
                 {
@@ -104,6 +118,10 @@
                 {
                     "type": "file",
                     "path": "com.mojang.Minecraft.appdata.xml"
+                },
+                {
+                    "type": "file",
+                    "path": "minecraft-wrapper"
                 }
             ]
         }

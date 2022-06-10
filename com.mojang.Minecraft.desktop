@@ -2,7 +2,7 @@
 Type=Application
 Name=Minecraft
 Icon=com.mojang.Minecraft
-Exec=minecraft
+Exec=minecraft-wrapper
 Categories=Game;
 StartupWMClass=net-minecraft-bootstrap-Bootstrap
 PrefersNonDefaultGPU=true

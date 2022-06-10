@@ -23,4 +23,4 @@ if [ ! -f $XDG_DATA_HOME/../.minecraft/.nonxdg-migrated ]; then
     touch $XDG_DATA_HOME/../.minecraft/.nonxdg-migrated
 fi
 
-exec /app/extra/minecraft-launcher/minecraft-launcher $@ --workDir $XDG_DATA_HOME/../.minecraft
+exec /app/extra/minecraft-launcher/minecraft-launcher "$@" --workDir $XDG_DATA_HOME/../.minecraft
