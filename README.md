@@ -20,7 +20,7 @@ To install, download a version of Minecraft Forge from their [official website](
 
 ![Forge Installation](screenshots/forge.png)
 
-Now, when you reboot the `com.mojang.Minecraft` launcher, you will see a new Minecraft listed clearly with "Forge" and the version number you installed. Happy modding!
+Now, when you restart the Minecraft launcher, you will see a new Minecraft listed clearly with "Forge" and the version number you installed. Happy modding!
 
 ## Disclaimer
 
