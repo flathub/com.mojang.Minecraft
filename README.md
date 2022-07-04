@@ -1,6 +1,6 @@
 # Minecraft (Flatpak)
 
-Welcome to the [FlatHub distribution of Minecraft](https://flathub.org/apps/details/com.mojang.Minecraft). To get started, as customary for the installation of any FlatHub app, make sure to follow the [setup guide](https://flatpak.org/setup/) before installing using `flatpak install flathub com.mojang.Minecraft`.
+Welcome to the unofficial [Flathub distribution of Minecraft](https://flathub.org/apps/details/com.mojang.Minecraft). To get started, as customary for the installation of any Flathub app, make sure to follow the [setup guide](https://flatpak.org/setup/) before installing the Minecraft Flatpak.
 
 ![Minecraft Launcher Home Screen](screenshots/minecraft1.png)
 
