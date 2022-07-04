@@ -22,6 +22,6 @@ To install, download a version of Minecraft Forge from their [official website](
 
 Now, when you restart the Minecraft launcher, you will see a new Minecraft listed clearly with "Forge" and the version number you installed. Happy modding!
 
-## Disclaimer
+## Steam Deck
 
 Please note that this wrapper is not verified by, affiliated with, or supported by Mojang or Minecraft.
