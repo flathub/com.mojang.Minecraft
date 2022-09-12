@@ -15,7 +15,8 @@
         "--device=dri",
         "--socket=pulseaudio",
         "--share=network",
-        "--env=XCURSOR_PATH=/run/host/share/icons:/run/host/user-share/icons"
+        "--env=XCURSOR_PATH=/run/host/share/icons:/run/host/user-share/icons",
+        "--filesystem=xdg-download:ro"
     ],
     "modules": [
         "shared-modules/libsecret/libsecret.json",
