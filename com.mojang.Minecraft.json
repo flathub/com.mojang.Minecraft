@@ -16,7 +16,8 @@
         "--socket=pulseaudio",
         "--share=network",
         "--env=XCURSOR_PATH=/run/host/share/icons:/run/host/user-share/icons",
-        "--filesystem=xdg-download:ro"
+        "--filesystem=xdg-download:ro",
+        "--talk-name=org.freedesktop.secrets"
     ],
     "modules": [
         "shared-modules/libsecret/libsecret.json",
