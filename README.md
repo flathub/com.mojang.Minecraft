@@ -24,4 +24,4 @@ Now, when you restart the Minecraft launcher, you will see a new Minecraft liste
 
 ## Steam Deck
 
-Please note that Minecraft Launcher currently [has a bug](https://github.com/flathub/com.mojang.Minecraft/issues/116#issuecomment-1054724391) causing Microsoft accounts to not remain logged in when used on a Steam Deck. For now, the only easy solution to this issue is to use [PolyMC](https://flathub.org/apps/details/org.polymc.PolyMC) instead.
+Please note that Minecraft Launcher currently [has a bug](https://github.com/flathub/com.mojang.Minecraft/issues/116#issuecomment-1054724391) causing Microsoft accounts to not remain logged in when used on a Steam Deck. For now, the only easy solution to this issue is to use [Prism](https://flathub.org/apps/details/org.prismlauncher.PrismLauncher) instead.
