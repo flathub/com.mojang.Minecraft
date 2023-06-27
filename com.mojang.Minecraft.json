@@ -18,7 +18,8 @@
         "--env=XCURSOR_PATH=/run/host/share/icons:/run/host/user-share/icons",
         "--env=LC_ALL=C",
         "--filesystem=xdg-download:ro",
-        "--filesystem=xdg-run/app/com.discordapp.Discord:create"
+        "--filesystem=xdg-run/app/com.discordapp.Discord:create",
+        "--talk-name=org.freedesktop.secrets"
     ],
     "modules": [
         "shared-modules/libsecret/libsecret.json",
