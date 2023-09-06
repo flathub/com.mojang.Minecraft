@@ -27,6 +27,7 @@
             "config-opts": [
                 "--enable-shared"
             ],
+            "no-parallel-make": true,
             "sources": [
                 {
                     "type": "git",
