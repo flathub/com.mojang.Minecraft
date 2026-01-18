@@ -5,4 +5,3 @@ Icon=com.mojang.Minecraft
 Exec=minecraft
 Categories=Game;
 StartupWMClass=net-minecraft-bootstrap-Bootstrap
-PrefersNonDefaultGPU=true
