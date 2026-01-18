@@ -20,8 +20,6 @@ finish-args:
   - --filesystem=xdg-download:ro
   - --filesystem=xdg-run/app/com.discordapp.Discord:create
 modules:
-  - shared-modules/libsecret/libsecret.json
-
   - name: flite
     config-opts:
       - --enable-shared
