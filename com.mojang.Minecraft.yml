@@ -45,7 +45,7 @@ modules:
       - type: extra-data
         filename: Minecraft.tar.gz
         url: https://launcher.mojang.com/download/Minecraft.tar.gz
-        sha256: 79c831f5a9196d06e54487ff66229cd3d11f203d068e7cb85e2058b4
+        sha256: 695269281547bbbcf47fe74633027a0e4ddc13a61060c686a7217e85d314e45e
         size: 1102510
       - type: script
         dest-filename: apply_extra
@@ -62,6 +62,8 @@ modules:
         path: com.mojang.Minecraft-128.png
       - type: file
         path: com.mojang.Minecraft.png
+      - type: file
+        path: com.mojang.Minecraft.svg
       - type: file
         path: com.mojang.Minecraft.appdata.xml
     build-commands:
