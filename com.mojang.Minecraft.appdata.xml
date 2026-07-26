@@ -2,7 +2,8 @@
 <component type="desktop-application">
   <id>com.mojang.Minecraft</id>
   <name>Minecraft Launcher</name>
-  <name xml:lang="ar">منفذ ماين كرافت</name>
+  <name xml:lang="ar">Minecraft Launcher</name>
+  <name xml:lang="bn">Minecraft Launcher</name>
   <name xml:lang="es">Minecraft Launcher</name>
   <name xml:lang="fr">Minecraft Launcher</name>
   <name xml:lang="hi">Minecraft Launcher</name>
