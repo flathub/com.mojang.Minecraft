@@ -36,8 +36,8 @@ modules:
   - name: xrandr
     sources:
       - type: archive
-        url: https://www.x.org/archive/individual/app/xrandr-1.5.3.tar.gz
-        sha256: 980befa14b48de2fa74dc07bbb22f746acfd12e1f9dbd539eab9a3c9b434d667
+        url: https://www.x.org/archive/individual/app/xrandr-1.5.4.tar.gz
+        sha256: b022276f1f2e6e206803027a5f569e6eb51e69d2d8886bfb5a7bc0612ddca4ee
 
   - name: minecraft
     buildsystem: simple
