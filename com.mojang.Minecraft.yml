@@ -57,10 +57,6 @@ modules:
       - type: file
         path: com.mojang.Minecraft.desktop
       - type: file
-        path: com.mojang.Minecraft-64.png
-      - type: file
-        path: com.mojang.Minecraft-128.png
-      - type: file
         path: com.mojang.Minecraft.png
       - type: file
         path: com.mojang.Minecraft.svg
@@ -70,8 +66,6 @@ modules:
       - install -Dm755 apply_extra /app/bin/apply_extra
       - install -Dp -m 755 minecraft /app/bin/minecraft
       - install -Dp -m 644 com.mojang.Minecraft.desktop /app/share/applications/com.mojang.Minecraft.desktop
-      - install -Dp -m 644 com.mojang.Minecraft-64.png /app/share/icons/hicolor/64x64/apps/com.mojang.Minecraft.png
-      - install -Dp -m 644 com.mojang.Minecraft-128.png /app/share/icons/hicolor/128x128/apps/com.mojang.Minecraft.png
-      - install -Dp -m 644 com.mojang.Minecraft.png /app/share/icons/hicolor/256x256/apps/com.mojang.Minecraft.png
-      - install -Dp -m 644 com.mojang.Minecraft.svg /app/share/icons/hicolor/symbolic/apps/com.mojang.Minecraft.svg
+      - install -Dp -m 644 com.mojang.Minecraft.png /app/share/icons/hicolor/128x128/apps/com.mojang.Minecraft.png
+      - install -Dp -m 644 com.mojang.Minecraft.svg /app/share/icons/hicolor/scalable/apps/com.mojang.Minecraft.svg
       - install -Dp -m 644 com.mojang.Minecraft.appdata.xml /app/share/appdata/com.mojang.Minecraft.appdata.xml
