@@ -9,6 +9,7 @@ tags:
 finish-args:
   - --persist=.minecraft
   - --socket=x11
+  - --socket=wayland
   - --share=ipc
   - --device=dri
   - --socket=pulseaudio
