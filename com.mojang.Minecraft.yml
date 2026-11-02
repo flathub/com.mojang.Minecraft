@@ -31,7 +31,7 @@ modules:
         commit: e9e2e37c329dbe98bfeb27a1828ef9a71fa84f88
         x-checker-data:
           type: git
-          tag-pattern: ^v([\\d.]+)$
+          tag-pattern: '^v([\d.]+)$'
 
   - name: xrandr
     sources:
