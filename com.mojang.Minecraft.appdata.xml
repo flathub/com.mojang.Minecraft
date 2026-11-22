@@ -50,7 +50,7 @@
     <value key="GnomeSoftware::popular-background">https://d3lapyynmdp1i9.cloudfront.net/thumbnails/com.mojang.Minecraft/com.mojang.minecraft-thumb.jpg</value>
   </metadata>
   <launchable type="desktop-id">com.mojang.Minecraft.desktop</launchable>
-  <project_license>LicenseRef-proprietary</project_license>
+  <project_license>LicenseRef-proprietary=https://www.minecraft.net/en-us/eula</project_license>
   <developer_name>Mojang AB</developer_name>
   <releases>
     <release version="2.1.3" date="2026-04-23"/>
